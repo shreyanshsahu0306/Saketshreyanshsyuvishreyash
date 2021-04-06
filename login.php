@@ -4,17 +4,31 @@ Author URL: https://colorlib.com
 License: Creative Commons Attribution 3.0 Unported
 License URL: http://creativecommons.org/licenses/by/3.0/
 -->
-<!DOCTYPE html>
+<?php
+
+//index.php
+
+//Include Configuration File
+
+
+
+// if(!isset($_SESSION['access_token']))
+// {
+
+//  $login_button = '<a href="'.$google_client->createAuthUrl().'">Login With Google</a>';
+// }
+
+?>
 <html>
 
 <head>
-	<title>Weddingz-Login</title>
+	<title>Creative Colorlib SignUp Form</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<script
 		type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
 	<!-- Custom Theme files -->
-	<link href="css/login.css" rel="stylesheet" type="text/css" media="all" />
+	<link href="login.css" rel="stylesheet" type="text/css" media="all" />
 	<!-- //Custom Theme files -->
 	<!-- web font -->
 	<link href="//fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i" rel="stylesheet">
@@ -53,7 +67,67 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				<div class="social-btn text-center">
 					<a href="#" class="btn btn-primary btn-lg"><i class="fa fa-facebook"></i> Facebook</a>
 					<a href="#" class="btn btn-info btn-lg"><i class="fa fa-twitter"></i> Twitter</a>
-					<a href="#" class="btn btn-danger btn-lg"><i class="fa fa-google"></i> Google</a>
+					<?php
+					include('GoogleAPI.php');
+
+					$login_button = '';
+
+
+					if(isset($_GET["code"]))
+					{
+
+					$token = $google_client->fetchAccessTokenWithAuthCode($_GET["code"]);
+
+
+					if(!isset($token['error']))
+					{
+					
+					$google_client->setAccessToken($token['access_token']);
+
+					
+					$_SESSION['access_token'] = $token['access_token'];
+
+
+					$google_service = new Google_Service_Oauth2($google_client);
+
+					
+					$data = $google_service->userinfo->get();
+
+					
+					if(!empty($data['given_name']))
+					{
+					$_SESSION['user_first_name'] = $data['given_name'];
+					}
+
+					if(!empty($data['family_name']))
+					{
+					$_SESSION['user_last_name'] = $data['family_name'];
+					}
+
+					if(!empty($data['email']))
+					{
+					$_SESSION['user_email_address'] = $data['email'];
+					}
+
+					if(!empty($data['gender']))
+					{
+					$_SESSION['user_gender'] = $data['gender'];
+					}
+
+					if(!empty($data['picture']))
+					{
+					$_SESSION['user_image'] = $data['picture'];
+					}
+					}
+					}
+					if(!isset($_SESSION['access_token']))
+					{
+ 				 	$login_button = '<a href="'.$google_client->createAuthUrl().'">Google</a>';
+					
+					// <a href="#" class="btn btn-info btn-lg"><i class="fa fa-twitter"></i> Twitter</a>
+					echo '<span align = "center" class="btn btn-Danger btn-lg" <i class="fa fa-googlr"></i>'.$login_button.'</span>';
+					}
+					?>
 				</div>
 				<br>
 
@@ -90,12 +164,6 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 
 	<script src="https://kit.fontawesome.com/bb81b3fcd8.js" crossorigin="anonymous"></script>
 </body>
-
-
-
-
-
-
 
 
 
