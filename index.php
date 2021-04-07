@@ -55,11 +55,6 @@ else{
 
 <body>
     
-
-
-
-
-
     <div class="header">
         <div class="container">
             <div class="row">
