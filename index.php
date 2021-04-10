@@ -114,6 +114,27 @@ else{
                             <li>
                                 <a href="#">About Us</a>
                             </li>
+                            <li>
+                                <!-- Profile dropDown -->
+                                <div class="dropdown">
+                                    <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false"> Profile </button>
+                                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                        <?php
+                                            // session_start();
+                                            // Show user name in profile section
+                                            if (isset($_SESSION['SuperUserName'])) {
+                                                $username = $_SESSION['SuperUserName'];
+                                                echo "<h4 class='super'> $username </h4>";
+                                            }
+                    
+                                            // shoe user image in profile section
+                                            if (isset($_SESSION['user_image'])) { 
+                                                echo '<img src="'.$_SESSION["user_image"].'" class="GoogleImg" style ="height: 45px; border-radius: 30px;" />';
+                                            }
+                                        ?>
+                                    </ul>
+                                </div>
+                            </li>
 
                         </ul>
                     </div>
@@ -121,6 +142,9 @@ else{
             </div>
         </div>
     </div>
+
+    
+
     <div id="slider" class="owl-carousel owl-theme slider">
         <div class="item">
             <div class="slider-pic"><img src="images/ring1.jpg" alt="Mirror Edge"></div>
