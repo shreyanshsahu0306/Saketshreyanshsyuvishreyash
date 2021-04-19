@@ -41,7 +41,7 @@ button.btn-default { height: 48px; }
 .required { color: red; }
 ::selection { background: #af6900; color: #fff; }
 .no-padding { padding-left: 0px; padding-right: 0px; }
-button, html input[type=button], input[type=reset], input[type=submit] { background: #ffa405; color: #fff; border-radius: 4px; }
+button, html input[type=button], input[type=reset], input[type=submit] { background: #e81741; color: #fff; border-radius: 4px; }
 
 /*-----------------------------------
 space css class
@@ -152,10 +152,10 @@ ul.listnone { list-style: none; margin: 0px; padding: 0px; }
   Template Buttons 
 --------------------------*/
 .btn { padding: 10px 20px; margin-bottom: 0; font-size: 14px; font-weight: 400; border: transparent; border-radius: 2px; text-transform: uppercase; font-weight: 800; font-family: 'Montserrat', sans-serif; letter-spacing: 1px; }
-.btn-default { background-color: #f48f00; color: #fff; }
-.btn-default:hover { background-color: #27c0c1; color: #fff; }
-.btn-primary { background-color: #f48f00; color: #fff; }
-.btn-primary:hover { background-color: #ffa422; color: #fff; }
+.btn-default { background-color: #e81741; color: #fff; }
+.btn-default:hover { background-color: #f75454; color: #fff; }
+.btn-primary { background-color: #e81741; color: #fff; }
+.btn-primary:hover { background-color: #f50c20; color: #fff; }
 .btn-light { background-color: #e9e6e0; color: #706a68; }
 .btn-light:hover { background-color: #04cccd; color: #fff; }
 .btn-lg { padding: 14px 8px; font-size: 12px; }
@@ -194,7 +194,7 @@ button .btn-default { height: 48px; background-color: #faf9f5; margin-bottom: 0p
 .top-links li:last-child { padding-right: 0px; }
 .top-links li a { font-size: 12px; color: #fafcfc; text-transform: uppercase; font-weight: 500; }
 .top-links li a:hover { color: #fff; }
-.header { background-color: #c7761f; z-index: 9; position: relative; }
+.header { background-color: #e81741; z-index: 9; position: relative; }
 .navbar-brand { float: left; height: 70px; padding: 14px 0px; font-size: 18px; line-height: 20px; }
 .navigation { float: right; }
 .logo { }
@@ -703,7 +703,7 @@ p.wp-caption-text { margin-bottom: 0; color: #353535; font-size: 11px; }
 
 /*------ Page Header ------------*/
 
-.tp-page-head { background: linear-gradient(rgba(245, 132, 2, 0.8), rgb(117, 126, 247)), rgba(6, 63, 63, 0.8) url(../images/ring1.jpg) no-repeat center; background-size: cover; color: #fff; }
+.tp-page-head { background: linear-gradient(rgba(240, 68, 96, 0.8), rgb(117, 126, 247)), rgba(6, 63, 63, 0.8) url(../images/ring1.jpg) no-repeat center; background-size: cover; color: #fff; }
 .tp-page-head .page-header { border: none; margin: 60px 0 40px; }
 .tp-page-head .page-header h1 { color: #fff; }
 
@@ -1307,7 +1307,7 @@ input[type="checkbox"] .styled:checked + label::after, input[type="radio"] .styl
       margin-left: 20px; }
   
   .add-to-cart, .like {
-    background: #ff9f1a;
+    background: #e81741;
     padding: 1.2em 1.5em;
     border: none;
     text-transform: UPPERCASE;
@@ -1316,7 +1316,7 @@ input[type="checkbox"] .styled:checked + label::after, input[type="radio"] .styl
     -webkit-transition: background .3s ease;
             transition: background .3s ease; }
     .add-to-cart:hover, .like:hover {
-      background: #b36800;
+      background: #da030d;
       color: #fff; }
   
   .not-available {
@@ -1427,7 +1427,7 @@ input[type="checkbox"] .styled:checked + label::after, input[type="radio"] .styl
 
   .dice-icon
   {
-    color: #FFD700;
+    color: #e81741;
   }
 
 
@@ -1535,7 +1535,7 @@ input[type="checkbox"] .styled:checked + label::after, input[type="radio"] .styl
 
 
 
-  /* FLIPCARD.......*/
+  /* Famenities 2.......*/
 
   
   #ame {
@@ -1549,7 +1549,7 @@ input[type="checkbox"] .styled:checked + label::after, input[type="radio"] .styl
     
      
   }
-  .new-card:hover{ background-color:#f5d547}
+  .new-card:hover{ background-color:#e81741;}
 
   .img-grid
   {
@@ -1570,7 +1570,7 @@ input[type="checkbox"] .styled:checked + label::after, input[type="radio"] .styl
     font-size: x-large;
     font-weight: bold;
   }
-.top-left a:hover { color:#3aa2cc}
+.top-left a:hover { color:#faf6f7}
 
 
 
@@ -1618,7 +1618,7 @@ input[type="checkbox"] .styled:checked + label::after, input[type="radio"] .styl
   
   /* Style the back side */
   .flip-card-back {
-    background-color: rgb(250, 194, 42);
+    background-color: #e81741;
     color: white;
     transform: rotateY(180deg);
     font-size:x-large;
