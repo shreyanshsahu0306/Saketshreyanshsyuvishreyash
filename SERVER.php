@@ -72,6 +72,11 @@ if(isset($_POST['login_user'])){
         header('location: index.php');
       //  $_SESSION['user'] = $login_user;
     }
+    // if admin login
+    elseif($email == 'admin@123' && $password == ' '){
+        $_SESSION['email'] = $email;
+        header('location:admin/dashboard.php');
+    }
     else{
        // array_push($errors, "Wrong username/password combination");
        echo"(<script LANGUAGE='JavaScript'>
