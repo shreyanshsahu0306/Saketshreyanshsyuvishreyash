@@ -55,11 +55,6 @@ else{
 
 <body>
     
-
-
-
-
-
     <div class="header">
         <div class="container">
             <div class="row">
@@ -120,9 +115,6 @@ else{
                                 <a href="#">About Us</a>
                             </li>
                             <li>
-                            <a href="#" class="btn btn-default btn-sm" style="font-family:open sans;">
-                            <i class="fas fa-user-circle"></i> Login
-       </a>
                             </li>
 
                         </ul>
@@ -131,6 +123,9 @@ else{
             </div>
         </div>
     </div>
+
+    
+
     <div id="slider" class="owl-carousel owl-theme slider">
         <div class="item">
             <div class="slider-pic"><img src="images/slider1.jpg" alt="Mirror Edge"></div>
