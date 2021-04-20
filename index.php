@@ -115,6 +115,9 @@ else{
                                 <a href="#">About Us</a>
                             </li>
                             <li>
+                                <a href="login.php" class="btn btn-default btn-sm" style="font-family:open sans;">
+                                <i class="fas fa-user-circle"></i> Login
+                                </a>
                             </li>
 
                         </ul>

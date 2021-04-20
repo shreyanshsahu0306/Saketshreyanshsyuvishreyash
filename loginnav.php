@@ -50,33 +50,5 @@
 
 
 <body>
-    <div class="collapse" id="searcharea">
-        <div class="input-group">
-            <input type="text" class="form-control" placeholder="Search for...">
-            <span class="input-group-btn">
-                <button class="btn tp-btn-primary" type="button">Search</button>
-            </span>
-        </div>
-    </div>
-    <div class="top-bar">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6 top-message">
-                    <p></p>
-                </div>
-                <div class="col-md-6 top-links">
-                    <ul class="listnone">
-                        <li><a href="faq.html"> Language</a></li>
-                        <li><a href="login.php">Login</a></li>
-                        <li><a href="signup.php" class=" ">Sign up</a></li>
-                        <li><a href="signup-vendor.html">Add Property</a></li>
-
-                        <li>
-                            <a role="button" data-toggle="collapse" href="#searcharea" aria-expanded="false"
-                                aria-controls="searcharea"> <i class="fa fa-search"></i> </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
+</body>
+    
