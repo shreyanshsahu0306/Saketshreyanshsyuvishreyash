@@ -73,7 +73,7 @@ if(isset($_POST['login_user'])){
       //  $_SESSION['user'] = $login_user;
     }
     // if admin login
-    elseif($email == 'admin@123' && $password == ' '){
+    elseif($email == 'admin@123' && $password == 'admin123'){
         $_SESSION['email'] = $email;
         header('location:admin/dashboard.php');
     }
